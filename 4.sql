@@ -14,3 +14,9 @@ where (Doctor.IDPosition=Positions.IDPosition)
 and (Doctor.IDDoctor=Record.IDDoctor)
 group by Title_position;
 
+
+select Title_position,count(FIOPatient) as sum_records from Record,Doctor,Positions,Patient
+where (Doctor.IDPosition=Positions.IDPosition) 
+and (Doctor.IDDoctor=Record.IDDoctor) 
+and (Record.IDPatient=Patient.IDPatient)
+group by Title_position;

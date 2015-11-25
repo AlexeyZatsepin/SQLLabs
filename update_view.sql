@@ -1,0 +1,1 @@
+update full_info set RecordingTime='2222-02-22 22:22:22' where dayname(RecordingTime)='Monday';
